@@ -4,7 +4,6 @@ from channel_models import generate_rf_channel_gain, generate_optical_channel_ga
 class HybridEnergyHarvester:
     """
     Models hybrid RF + optical energy harvesting at a ZED node.
-    
     This implements:
         E_RF(t) = η_rf * P_rf(t) * h_i  (from research plan eq. 1)
         E_opt(t) = η_opt * P_opt(t) * g_i (from research plan eq. 2)
@@ -34,7 +33,6 @@ class HybridEnergyHarvester:
     def harvest(self, n_samples):
         """
         Returns n_samples realizations of total harvested energy per time slot (in Joules).
-        
         Assumes each time slot is T=1ms (adjust T_slot_s for different durations).
         """
         T_slot_s = 1e-3  # 1 millisecond time slot (typical for IoT duty cycling)
