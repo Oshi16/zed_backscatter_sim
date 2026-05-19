@@ -3,9 +3,8 @@ import numpy as np
 def generate_rf_channel_gain(n_samples, path_loss_exponent=2.5, distance_m=5.0):
     """
     Generate n_samples of RF channel power gains.
-    The gain combines distance-dependent path loss (deterministic) 
-    and Rayleigh small-scale fading (stochastic). In Rayleigh fading, 
-    the power gain h^2 is exponentially distributed with mean 1.
+    The gain combines distance-dependent path loss (deterministic) and Rayleigh small-scale fading (stochastic). 
+    In Rayleigh fading, the power gain h^2 is exponentially distributed with mean 1.
     Parameters:
         n_samples: number of Monte Carlo realizations
         path_loss_exponent: α in the path loss formula (2.5 typical indoors)
